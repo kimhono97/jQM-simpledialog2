@@ -6,9 +6,9 @@
  */
  
 (function($, undefined ) {
-  $.widget( "mobile.simpledialog2", $.mobile.widget, {
+  $.widget( "mobile.simpledialog2", $.Widget, {
 	options: {
-		version: '1.0.1-2012061300', // jQueryMobile-YrMoDaySerial
+		version: '1.5.0-2024090400', // jQueryMobile-YrMoDaySerial
 		mode: 'blank', // or 'button'
 		themeDialog: 'b',
 		themeInput: false,
@@ -335,7 +335,7 @@
 			ele = self.element;
 		
 		if ( self.options.mode === 'blank' ) {
-			$.mobile.sdCurrentDialog.sdIntContent.find('select').each(function() {
+			$.mobile.sdCurrentDialog && $.mobile.sdCurrentDialog.sdIntContent.find('select').each(function() {
 				if ( $(this).data('nativeMenu') == false ) {
 					$(this).data('selectmenu').menuPage.remove();
 					$(this).data('selectmenu').screen.remove();
