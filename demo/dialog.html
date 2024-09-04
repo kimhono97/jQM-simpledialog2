@@ -4,16 +4,16 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>jQueryMobile - SimpleDialog2 Demos</title>
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
-	<link type="text/css" href="http://dev.jtsage.com/cdn/simpledialog/latest/jquery.mobile.simpledialog.min.css" rel="stylesheet" /> 
-	<link type="text/css" href="http://dev.jtsage.com/jQM-DateBox/css/demos.css" rel="stylesheet" /> 
+	<link rel="stylesheet" href="./jq5/jquery.mobile-1.5.0-rc1.min.css">
+	<link type="text/css" href="../src/css/jquery.mobile.simpledialog.css" rel="stylesheet" /> 
+	
 	
 	<!-- NOTE: Script load order is significant! -->
 	
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
-	<script type="text/javascript" src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
-	<script type="text/javascript" src="http://dev.jtsage.com/cdn/simpledialog/latest/jquery.mobile.simpledialog2.js"></script>
-	<script type="text/javascript" src="http://dev.jtsage.com/jQM-SimpleDialog/demos2/extras.js"></script>
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+	<script src="./jq5/jquery.mobile-1.5.0-rc1.min.js"></script>
+	<script type="text/javascript" src="../src/js/jquery.mobile.simpledialog2.js"></script>
+	<script type="text/javascript" src="./extras.js"></script>
 
 	
 	<script type="text/javascript" src="http://dev.jtsage.com/gpretty/prettify.js"></script>
@@ -26,7 +26,7 @@
 	
 </head>
 <body>
-<div data-role="page" data-theme="c" id="fullscreen"> 
+<div data-role="page" data-theme="c" id="dialogmode"> 
 	<div data-role="header"> 
 		<h1>jQueryMobile - SimpleDialog2</h1>
 		<a href="index.html" data-icon="home" data-iconpos="notext">Home</a>
@@ -46,23 +46,23 @@
 		
 		<div class="content-primary"> 
 			
-			<h2>Full Screen Mode</h2>
-			<p>This shows the built in fullscreen mode.  It is *not* a new page, so it does not affect the DOM cacheing in any way. Like the jQM Dialog mode, this acts on displays less than 400px wide unless 'fullScreenForce' is also true.</p>
+			<h2>jQM Native Dialog Mode</h2>
+			<p>This shows the jQM Native Dialog mode.  Note that the example code below shows the FORCED use of the dialog.  If you wish to use the "only on small screens" mode (less than 400px wide), only set 'dialogAllow' to true.</p>
 			<script type="text/javascript"> 
-				$(document).delegate('#fsbut', 'click', function() {
+				$(document).delegate('#dialogbut', 'click', function() {
 					$('<div>').simpledialog2({
 						mode: 'blank',
 						headerText: 'Some Stuff',
 						headerClose: true,
-						fullScreen: true,
-						fullScreenForce: true,
+						dialogAllow: true,
+						dialogForce: true,
 						blankContent : 
 							"<ul data-role='listview'><li>Some</li><li>List</li><li>Items</li></ul>"+
 							"<a rel='close' data-role='button' href='#'>Close</a>"
 					})
 				});
 			</script>
-			<a href="#" id="fsbut" data-role="button">Open Dialog</a>
+			<a href="#" id="dialogbut" data-role="button">Open Dialog</a>
 			<strong>HTML</strong><pre class="prettyprint">
 &lt;a href="#" id="opendialog" data-role="button"&gt;Open Dialog&lt;/a&gt;</pre>
 
@@ -75,8 +75,8 @@ $(document).delegate('#opendialog', 'click', function() {
     mode: 'blank',
     headerText: 'Some Stuff',
     headerClose: true,
-    fullScreen: true,
-    fullScreenForce: true,
+    dialogAllow: true,
+    dialogForce: true,
     blankContent : 
       "&lt;ul data-role='listview'&gt;&lt;li&gt;Some&lt;/li&gt;&lt;li&gt;List&lt;/li&gt;&lt;li&gt;Items&lt;/li&gt;&lt;/ul&gt;"+
       // NOTE: the use of rel="close" causes this button to close the dialog.
