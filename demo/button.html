@@ -4,7 +4,9 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>jQueryMobile - SimpleDialog2 Demos</title>
+	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="./jq5/jquery.mobile-1.5.0-rc1.min.css">
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
 	<link type="text/css" href="../src/css/jquery.mobile.simpledialog.css" rel="stylesheet" /> 
 	
 	
@@ -12,24 +14,21 @@
 	
 	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 	<script src="./jq5/jquery.mobile-1.5.0-rc1.min.js"></script>
+	<script src="../src/js/jquery.mobile.polyfill.js"></script>
 	<script type="text/javascript" src="../src/js/jquery.mobile.simpledialog2.js"></script>
 	<script type="text/javascript" src="./extras.js"></script>
 
 	
 	<script type="text/javascript" src="http://dev.jtsage.com/gpretty/prettify.js"></script>
 	<link type="text/css" href="http://dev.jtsage.com/gpretty/prettify.css" rel="stylesheet" />
-	<script type="text/javascript">
-		$('div').live('pagecreate', function() {
-			prettyPrint()
-		});
-	</script>
+
 	
 </head>
 <body>
-<div data-role="page" data-theme="c" id="button"> 
-	<div data-role="header"> 
+<div class="page" id="button"> 
+	<div class="header"> 
 		<h1>jQueryMobile - SimpleDialog2</h1>
-		<a href="index.html" data-icon="home" data-iconpos="notext">Home</a>
+		
 	</div>
 	<div data-role="content" data-theme="c">
 		<div class="content-secondary"> 
@@ -160,7 +159,7 @@ $(document).delegate('#opendialog', 'click', function() {
 		
 		
 	</div>
-	<div data-role="footer">
+	<div class="footer">
 	</div>
 </div>
 </html>

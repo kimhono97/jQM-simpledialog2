@@ -264,7 +264,7 @@
 			}
 			
 			self.sdIntContent.removeClass().css({'top': 'auto', 'width': 'auto', 'left': 'auto', 'marginLeft': 'auto', 'marginRight': 'auto', 'zIndex': o.zindex});
-			$.mobile.changePage(self.dialogPage, {'transition': (o.animate === true) ? o.transition : 'none'});
+			$.mobile.changePage && $.mobile.changePage(self.dialogPage, {'transition': (o.animate === true) ? o.transition : 'none'});
 		} else {
 			self.isDialog = false;
 			self.selects = [];
@@ -337,9 +337,10 @@
 		if ( self.options.mode === 'blank' ) {
 			$.mobile.sdCurrentDialog && $.mobile.sdCurrentDialog.sdIntContent.find('select').each(function() {
 				if ( $(this).data('nativeMenu') == false ) {
-					$(this).data('selectmenu').menuPage.remove();
-					$(this).data('selectmenu').screen.remove();
-					$(this).data('selectmenu').listbox.remove();
+					var selmenu = $(this).data('selectmenu');
+					selmenu && selmenu.menuPage.remove();
+					selmenu && selmenu.screen.remove();
+					selmenu && selmenu.listbox.remove();
 				}
 			});
 		}

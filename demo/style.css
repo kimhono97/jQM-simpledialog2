@@ -1,0 +1,59 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+pre {
+    overflow-x: auto;
+}
+
+.page {
+    margin: 1em;
+    margin-bottom: 100px;
+    flex: 1 1 auto;
+}
+
+.sidebar ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    padding: 0.5em;
+    padding-left: 2em;
+    background-color: rgb(214, 228, 255);
+    margin: 1px;
+    border-radius: 5px;
+}
+
+.sidebar li.list-divider {
+    padding-left: 1em;
+    font-weight: bold;
+    background-color: rgb(195, 189, 228);
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 0.5em;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: rgb(51, 51, 51);
+}
+
+.footer a {
+    text-decoration: none;
+    padding: 0.5em 1em;
+    color: black !important;
+    background-color: darkgray;
+    border-radius: 5px;
+}
+.footer a:hover {
+    opacity: 0.9;
+}
