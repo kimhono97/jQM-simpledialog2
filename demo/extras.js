@@ -64,7 +64,7 @@ function makeLayouts() {
 		'</ul>'
 	);
 	$(".footer").html(
-		'<a href="https://github.com/jtsage/jquery-mobile-simpledialog">GitHub Source</a>' +
+		'<a href="https://github.com/kimhono97/jQM-simpledialog2">GitHub Source</a>' +
 		'<a href="http://dev.jtsage.com/forums/">Support Forums</a>' +
 		'<a href="http://dev.jtsage.com/blog/">Blog</a>' +
 		'<a href="mailto:jtsage+datebox@gmail.com">Contact</a>' +
